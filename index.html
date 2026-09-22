@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Figtree:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,19 +41,22 @@
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="hero">
-  <nav class="nav" aria-label="Seções">
-    <a class="brand" href="#">GT</a>
-    <ul>
-      <li><a href="#trabalho">Trabalho</a></li>
-      <li><a href="#palestras">Palestras</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+<nav class="bar" aria-label="Seções">
+  <a class="brand" href="#topo">GT</a>
+  <ul>
+    <li><a href="#trabalho">Trabalho</a></li>
+    <li><a href="#fotos">Fotos</a></li>
+    <li><a href="#palestras">Palestras</a></li>
+    <li><a href="#premios">Prêmios</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="topo">
   <div class="hero-body">
-    <h1>Guilherme<br>Tavares</h1>
+    <h1 aria-label="Guilherme Tavares"><span class="ln"><span>Guilherme</span></span><span class="ln"><span>Tavares</span></span></h1>
     <figure class="portrait">
-      <img src="assets/guilherme.jpg" width="406" height="406" alt="Guilherme Tavares falando ao microfone em um palco">
+      <img src="assets/guilherme.jpg" width="749" height="937" alt="Guilherme Tavares sorrindo, de braços cruzados, no Astra Commons Goiânia">
     </figure>
     <div class="hero-text">
       <p class="lead">Coloco agentes de IA para trabalhar em sistemas de produção.</p>
@@ -69,20 +73,20 @@
 
 <section class="band" aria-labelledby="prova-t">
   <div class="wrap">
-    <h2 id="prova-t">Com prova</h2>
-    <dl class="ledger">
+    <h2 id="prova-t" class="rv">Com prova</h2>
+    <dl class="ledger rv">
       <div><dt>OpenAI Codex Ambassador</dt><dd><a href="https://developers.openai.com/community/codex-ambassadors">OpenAI</a></dd></div>
-      <div><dt>Nota 9,39/10 no 1º Codex Meetup Goiânia</dt><dd><a href="https://luma.com/59ui4k2a">Luma</a></dd></div>
+      <div><dt>Nota <span class="num" data-to="9.39" data-dec="2">9,39</span>/10 no 1º Codex Meetup Goiânia</dt><dd><a href="https://luma.com/59ui4k2a">Luma</a></dd></div>
       <div><dt>Viajadoras nas lojas, 1º lugar no Centelha 3 Goiás</dt><dd><a href="https://apps.apple.com/br/app/id6755790482">App Store</a> <a href="https://play.google.com/store/apps/details?id=com.viajadoras.app">Google Play</a></dd></div>
-      <div><dt>19 versões de ferramentas open source para agentes</dt><dd><a href="https://github.com/tavaresgmg/cairn/releases">Cairn</a> <a href="https://github.com/tavaresgmg/groundcraft/releases">Groundcraft</a></dd></div>
+      <div><dt><span class="num" data-to="19">19</span> versões de ferramentas open source para agentes</dt><dd><a href="https://github.com/tavaresgmg/cairn/releases">Cairn</a> <a href="https://github.com/tavaresgmg/groundcraft/releases">Groundcraft</a></dd></div>
     </dl>
   </div>
 </section>
 
 <section id="trabalho" class="band" aria-labelledby="trabalho-t">
   <div class="wrap">
-    <h2 id="trabalho-t">Trabalho</h2>
-    <ol class="talks">
+    <h2 id="trabalho-t" class="rv">Trabalho</h2>
+    <ol class="rows rv">
       <li><time>2026</time><div><h3>Platform Lead, <a href="https://claravista.com.br">Claravista</a></h3><p>Plataforma de dados de clientes em Go, com IA em produção.</p></div></li>
       <li><time>2025</time><div><h3>Cofundador e CTO, <a href="https://viajadoras.com">Viajadoras</a></h3><p>App feito do zero com agentes de IA.</p></div></li>
       <li><time>2025</time><div><h3>Engenheiro full stack, Auvo</h3><p>Plataforma usada por mais de 6.000 empresas.</p></div></li>
@@ -90,48 +94,79 @@
       <li><time>2023</time><div><h3>P&amp;D, UFG</h3><p>API e blockchain para rastreabilidade no agro.</p></div></li>
       <li><time>2022</time><div><h3>Fundador, <a href="https://gtechgo.com">GT Tecnologia</a></h3><p>Software sob encomenda.</p></div></li>
     </ol>
-    <h3 class="sub">Código aberto</h3>
-    <ul class="repos">
-      <li><h3><a href="https://github.com/tavaresgmg/groundcraft">Groundcraft</a></h3><p>Plugin para o Codex trabalhar sozinho, com prova.</p></li>
-      <li><h3><a href="https://github.com/tavaresgmg/cairn">Cairn</a></h3><p>Fluxo de trabalho para Codex e Claude Code.</p></li>
-      <li><h3><a href="https://github.com/tavaresgmg/codex-simplify-skill">Simplify</a></h3><p>Skill de refatoração em 150 linhas.</p></li>
+    <h3 class="sub rv">Código aberto</h3>
+    <ul class="repos rv">
+      <li><a href="https://github.com/tavaresgmg/groundcraft"><h3>Groundcraft</h3><p>Plugin para o Codex trabalhar sozinho, com prova.</p></a></li>
+      <li><a href="https://github.com/tavaresgmg/cairn"><h3>Cairn</h3><p>Fluxo de trabalho para Codex e Claude Code.</p></a></li>
+      <li><a href="https://github.com/tavaresgmg/codex-simplify-skill"><h3>Simplify</h3><p>Skill de refatoração em 150 linhas.</p></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="fotos" class="band" aria-labelledby="fotos-t">
+  <div class="wrap">
+    <div class="gal-head rv">
+      <h2 id="fotos-t">Fotos</h2>
+      <div class="filters" role="group" aria-label="Filtrar fotos">
+        <button type="button" aria-pressed="true" data-f="todas">Todas</button>
+        <button type="button" aria-pressed="false" data-f="palco">Palco</button>
+        <button type="button" aria-pressed="false" data-f="comunidade">Comunidade</button>
+        <button type="button" aria-pressed="false" data-f="premios">Prêmios</button>
+      </div>
+    </div>
+    <ul class="gallery">
+      <li data-cat="palco"><a href="assets/fotos/astra-commons-2026-palco.jpg" data-foto="astra-commons-2026-palco"><img src="assets/fotos/astra-commons-2026-palco-p.jpg" width="1600" height="897" loading="lazy" alt="Palestra no Astra Commons Goiânia, com a OpenAI, 2026"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/codex-meetup-goiania-2-abertura.jpg" data-foto="codex-meetup-goiania-2-abertura"><img src="assets/fotos/codex-meetup-goiania-2-abertura-p.jpg" width="1200" height="1600" loading="lazy" alt="Abertura do 2º Codex Community Meetup Goiânia, 2026"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/codex-meetup-goiania-2-grupo.jpg" data-foto="codex-meetup-goiania-2-grupo"><img src="assets/fotos/codex-meetup-goiania-2-grupo-p.jpg" width="1600" height="1200" loading="lazy" alt="2º Codex Community Meetup Goiânia, 2026"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/codex-meetup-goiania-2-painel.jpg" data-foto="codex-meetup-goiania-2-painel"><img src="assets/fotos/codex-meetup-goiania-2-painel-p.jpg" width="1200" height="1600" loading="lazy" alt="Painel no 2º Codex Community Meetup Goiânia, 2026"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/astra-commons-2026-grupo.jpg" data-foto="astra-commons-2026-grupo"><img src="assets/fotos/astra-commons-2026-grupo-p.jpg" width="1600" height="898" loading="lazy" alt="Astra Commons Goiânia, 2026"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/aws-codex-2026-palco.jpg" data-foto="aws-codex-2026-palco"><img src="assets/fotos/aws-codex-2026-palco-p.jpg" width="720" height="1280" loading="lazy" alt="Agentes de código no AWS User Group Goiânia, 2026"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/aws-codex-2026-grupo.jpg" data-foto="aws-codex-2026-grupo"><img src="assets/fotos/aws-codex-2026-grupo-p.jpg" width="1280" height="720" loading="lazy" alt="AWS User Group e Codex Community, Goiânia, 2026"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/expo-favela-2025-painel.jpg" data-foto="expo-favela-2025-painel"><img src="assets/fotos/expo-favela-2025-painel-p.jpg" width="853" height="568" loading="lazy" alt="Painel sobre maratonas e comunidades na Expo Favela Innovation, 2025"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/codex-meetup-goiania-1.jpg" data-foto="codex-meetup-goiania-1"><img src="assets/fotos/codex-meetup-goiania-1-p.jpg" width="1600" height="1200" loading="lazy" alt="1º Codex Community Meetup Goiânia, 2026"></a></li>
+      <li data-cat="premios"><a href="assets/fotos/agrostartup-2025-premio.jpg" data-foto="agrostartup-2025-premio"><img src="assets/fotos/agrostartup-2025-premio-p.jpg" width="1600" height="1600" loading="lazy" alt="3º lugar no Desafio AgroStartup, 2025"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/semcomp-ssa-2026.jpg" data-foto="semcomp-ssa-2026"><img src="assets/fotos/semcomp-ssa-2026-p.jpg" width="1130" height="1169" loading="lazy" alt="Mesa de IA na SEMCOMP SSA, 2026"></a></li>
+      <li data-cat="premios"><a href="assets/fotos/ideathon-coled-2024-1-lugar.jpg" data-foto="ideathon-coled-2024-1-lugar"><img src="assets/fotos/ideathon-coled-2024-1-lugar-p.jpg" width="1600" height="1066" loading="lazy" alt="1º lugar no Ideathon COLED, Hub Goiás, 2024"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/expo-favela-2025-grupo.jpg" data-foto="expo-favela-2025-grupo"><img src="assets/fotos/expo-favela-2025-grupo-p.jpg" width="1600" height="1069" loading="lazy" alt="Expo Favela Innovation, 2025. Foto de Silvio Simões"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/hackathon-uai-tech-2025-pitch.jpg" data-foto="hackathon-uai-tech-2025-pitch"><img src="assets/fotos/hackathon-uai-tech-2025-pitch-p.jpg" width="1576" height="1600" loading="lazy" alt="Pitch no Hackathon GO! Uai Tech, 2025"></a></li>
+      <li data-cat="premios"><a href="assets/fotos/campus-party-brasilia-2025.jpg" data-foto="campus-party-brasilia-2025"><img src="assets/fotos/campus-party-brasilia-2025-p.jpg" width="1200" height="1600" loading="lazy" alt="Hackathon na Campus Party Brasília, 2025"></a></li>
+      <li data-cat="palco"><a href="assets/fotos/portera-day-2025.jpg" data-foto="portera-day-2025"><img src="assets/fotos/portera-day-2025-p.jpg" width="1600" height="1200" loading="lazy" alt="Portera Day, 2025"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/conecta-ceia-2025.jpg" data-foto="conecta-ceia-2025"><img src="assets/fotos/conecta-ceia-2025-p.jpg" width="1200" height="1600" loading="lazy" alt="Conecta CEIA, 2025"></a></li>
+      <li data-cat="premios"><a href="assets/fotos/agrostartup-2025-palco.jpg" data-foto="agrostartup-2025-palco"><img src="assets/fotos/agrostartup-2025-palco-p.jpg" width="1600" height="1066" loading="lazy" alt="Premiação do Desafio AgroStartup, 2025"></a></li>
+      <li data-cat="comunidade"><a href="assets/fotos/conecta-ceia-2025-grupo.jpg" data-foto="conecta-ceia-2025-grupo"><img src="assets/fotos/conecta-ceia-2025-grupo-p.jpg" width="1200" height="1600" loading="lazy" alt="Conecta CEIA, 2025"></a></li>
     </ul>
   </div>
 </section>
 
 <section id="palestras" class="band" aria-labelledby="palestras-t">
   <div class="wrap">
-    <h2 id="palestras-t">Palestras</h2>
-    <ol class="talks">
-      <li><time datetime="2026-09-19">set 2026</time><h3>Codex Community Meetup Goiânia, 2ª edição</h3></li>
-      <li><time datetime="2026-09-16">set 2026</time><h3>Astra Commons Goiânia, com a OpenAI</h3></li>
-      <li><time datetime="2026-09-15">set 2026</time><h3>AWS User Group Goiânia</h3></li>
-      <li><time datetime="2026-08">ago 2026</time><h3>SEMCOMP SSA, UFBA</h3></li>
-      <li><time datetime="2026-08-15">ago 2026</time><h3>AI Glasses Brasil, CEIA/UFG e Meta</h3></li>
-      <li><time datetime="2026-07-11">jul 2026</time><h3>Codex Community Meetup Goiânia, 1ª edição</h3></li>
-      <li><time datetime="2025">2025</time><h3>Painel na Expo Favela Innovation</h3></li>
+    <h2 id="palestras-t" class="rv">Palestras</h2>
+    <ol class="rows rv">
+      <li data-foto="codex-meetup-goiania-2-abertura"><time>set 2026</time><h3>Codex Community Meetup Goiânia, 2ª edição</h3></li>
+      <li data-foto="astra-commons-2026-palco"><time>set 2026</time><h3>Astra Commons Goiânia, com a OpenAI</h3></li>
+      <li data-foto="aws-codex-2026-palco"><time>set 2026</time><h3>AWS User Group Goiânia</h3></li>
+      <li data-foto="semcomp-ssa-2026"><time>ago 2026</time><h3>SEMCOMP SSA, UFBA</h3></li>
+      <li><time>ago 2026</time><h3>AI Glasses Brasil, CEIA/UFG e Meta</h3></li>
+      <li data-foto="codex-meetup-goiania-1"><time>jul 2026</time><h3>Codex Community Meetup Goiânia, 1ª edição</h3></li>
+      <li data-foto="expo-favela-2025-painel"><time>2025</time><h3>Painel na Expo Favela Innovation</h3></li>
     </ol>
-    <figure class="photo">
-      <img src="assets/meetup-codex.jpg" width="1600" height="1200" loading="lazy" alt="Participantes do 1º Codex Community Meetup Goiânia reunidos em frente ao telão com o logo do Codex">
-      <figcaption>1º Codex Community Meetup Goiânia, Hub Goiás.</figcaption>
-    </figure>
   </div>
 </section>
 
-<section class="band" aria-labelledby="premios-t">
+<section id="premios" class="band" aria-labelledby="premios-t">
   <div class="wrap">
-    <h2 id="premios-t">Prêmios</h2>
-    <ol class="talks">
-      <li><time>2025</time><h3>3º lugar, Desafio AgroStartup (FAEG)</h3></li>
+    <h2 id="premios-t" class="rv">Prêmios</h2>
+    <ol class="rows rv">
+      <li data-foto="agrostartup-2025-premio"><time>2025</time><h3>3º lugar, Desafio AgroStartup (FAEG)</h3></li>
       <li><time>2024</time><h3>2º lugar, Hackathon Governo de Goiás na Campus Party</h3></li>
       <li><time>2024</time><h3>3º lugar, Hackathon do Congresso Brasileiro de Sistemas</h3></li>
       <li><time>2024</time><h3>2º lugar, Datathon IME/UFG</h3></li>
-      <li><time>2024</time><h3>1º lugar, Ideathon COLED (Hub Goiás)</h3></li>
+      <li data-foto="ideathon-coled-2024-1-lugar"><time>2024</time><h3>1º lugar, Ideathon COLED (Hub Goiás)</h3></li>
       <li><time>2024</time><h3>3º lugar, Hackathon GO HUB</h3></li>
       <li><time>2023</time><h3>Menção honrosa, Game Jam Bacaê</h3></li>
       <li><time>2023</time><h3>1º lugar, MS4Meckathon (UFG)</h3></li>
     </ol>
-    <p class="note">Mentor no Hub Goiás e no Startup Day, jurado na Olimpíada Brasileira de Robótica.</p>
+    <p class="note rv">Mentor no Hub Goiás e no Startup Day, jurado na Olimpíada Brasileira de Robótica.</p>
   </div>
 </section>
 
@@ -149,5 +184,14 @@
 </section>
 
 </main>
+
+<dialog class="lightbox" aria-label="Foto ampliada">
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="lb-prev" aria-label="Foto anterior">&#8249;</button>
+  <button type="button" class="lb-next" aria-label="Próxima foto">&#8250;</button>
+  <button type="button" class="lb-close" aria-label="Fechar">&#215;</button>
+</dialog>
+<img class="peek" alt="" aria-hidden="true">
+<script src="app.js" defer></script>
 </body>
 </html>
