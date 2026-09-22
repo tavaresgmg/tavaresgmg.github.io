@@ -116,15 +116,9 @@ h3 { font-size: 1.3rem; line-height: 1.25; }
 .ledger dt { font-weight: 500; font-size: 1.125rem; max-width: 52ch; }
 .ledger dd { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 1rem; }
 
-/* roles */
-.roles, .repos, .talks { list-style: none; margin: 0; padding: 0; }
-.roles li { padding: 18px 0; border-top: 1px solid var(--line); max-width: 68ch; }
-.roles li:first-child { border-top: 2px solid var(--ink); }
-.roles h3 { margin-bottom: 4px; }
-.roles p, .repos p { margin: 0; color: var(--ink-2); }
-.roles h3 a { color: inherit; text-decoration-color: var(--roxo); }
-
 /* repos */
+.repos, .talks { list-style: none; margin: 0; padding: 0; }
+.repos p { margin: 0; color: var(--ink-2); }
 .repos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; border-top: 2px solid var(--ink); }
 .repos li { padding: 26px 0; border-bottom: 1px solid var(--line); }
 .repos h3 { margin-bottom: 8px; }
@@ -137,6 +131,8 @@ h3 { font-size: 1.3rem; line-height: 1.25; }
 }
 .talks time { font-variant-numeric: tabular-nums; color: var(--ink-2); font-size: 1rem; padding-top: 2px; }
 .talks h3 { font-size: 1.2rem; }
+.talks h3 a { color: inherit; text-decoration-color: var(--roxo); }
+.talks p { margin: 2px 0 0; color: var(--ink-2); }
 
 .sub { font-size: clamp(1.5rem, 3vw, 2rem); margin: 56px 0 20px; }
 .photo { margin: 48px 0 0; }
